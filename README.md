@@ -176,7 +176,6 @@ cd order-service
 mvn clean install
 mvn spring-boot:run
 ```
-
 ## 🔧 Custom Database Configuration
 
 ### Changing Database Credentials
@@ -225,9 +224,6 @@ docker-compose build
 # Start services
 docker-compose up -d
 ```
-
-
-
 ## 📧 Email Notification System
 
 ### Features
