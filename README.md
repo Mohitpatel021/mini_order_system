@@ -15,6 +15,7 @@ This project consists of three microservices:
 - **Backend**: Spring Boot 3.5.4
 - **Database**: PostgreSQL 15
 - **Cache**: Redis
+- **Email**: Spring Mail (SMTP)
 - **Containerization**: Docker & Docker Compose
 - **Build Tool**: Maven
 - **Java Version**: 17+
@@ -101,6 +102,10 @@ DB_PASSWORD=root
 # Redis Configuration  
 REDIS_HOST=localhost
 REDIS_PORT=6379
+
+# Email Configuration (for Order Service)
+MAIL_USERNAME=your-email@gmail.com
+MAIL_PASSWORD=your-app-password
 ```
 
 ### 3. Build and Run Services
@@ -125,6 +130,70 @@ cd order-service
 mvn clean install
 mvn spring-boot:run
 ```
+
+## 📧 Email Notification System
+
+### Features
+- **Asynchronous Email Sending**: Uses `CompletableFuture.runAsync()` for non-blocking email delivery
+- **HTML Email Templates**: Beautiful, responsive HTML email templates with CSS styling
+- **Template Engine**: Separate HTML template files with placeholder replacement
+- **Fallback Mechanism**: Plain text email if HTML template fails to load
+- **INR Currency Support**: All amounts displayed in Indian Rupees (₹)
+
+### Email Configuration
+The Order Service includes email functionality for order confirmations:
+
+#### Gmail SMTP Configuration
+```yaml
+spring:
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: ${MAIL_USERNAME:your-email@gmail.com}
+    password: ${MAIL_PASSWORD:your-app-password}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+          timeout: 10000
+          connectiontimeout: 10000
+          writetimeout: 10000
+        transport:
+          protocol: smtp
+```
+
+#### Email Template Location
+- **Template File**: `order-service/src/main/resources/templates/order-confirmation-email.html`
+- **Template Variables**:
+  - `{{userName}}` - User's full name
+  - `{{orderId}}` - Order ID with # prefix
+  - `{{productName}}` - Product name
+  - `{{quantity}}` - Order quantity
+  - `{{unitPrice}}` - Unit price in ₹
+  - `{{status}}` - Order status with badge
+  - `{{orderDate}}` - Order creation date
+  - `{{totalAmount}}` - Total amount in ₹
+
+#### Email Features
+- **Professional Design**: Gradient header, clean layout, mobile-responsive
+- **Status Badges**: Visual status indicators with color coding
+- **Currency Formatting**: Proper ₹ symbol for all monetary values
+- **Async Processing**: Email sending doesn't block order processing
+- **Error Handling**: Comprehensive error logging and fallback options
+
+### Setting Up Email (Gmail)
+1. **Enable 2-Step Verification** on your Gmail account
+2. **Generate App Password**:
+   - Go to Google Account → Security → App Passwords
+   - Select "Mail" as the app
+   - Copy the 16-character password
+3. **Set Environment Variables**:
+   ```bash
+   MAIL_USERNAME=your-email@gmail.com
+   MAIL_PASSWORD=your-16-character-app-password
+   ```
 
 ## 📊 Database Schema
 
@@ -207,6 +276,7 @@ CREATE TABLE orders (
 4. **Order Creation**: Order is saved to database
 5. **Stock Update**: Product stock is updated via product service
 6. **Cache Invalidation**: Product cache is cleared
+7. **Email Notification**: Order confirmation email is sent asynchronously
 
 ### Inter-Service Communication
 - **Order Service ↔ Login Service**: User verification
@@ -293,7 +363,20 @@ docker-compose logs product-service
 docker-compose logs login-service
 ```
 
-#### 4. Port Conflicts
+#### 4. Email Configuration Issues
+```bash
+# Check email configuration
+# Verify Gmail App Password is correct
+# Ensure 2-Step Verification is enabled
+# Check SMTP settings in application.yml
+
+# Test email functionality
+curl -X POST http://localhost:8081/api/v1/orders \
+  -H "Content-Type: application/json" \
+  -d '{"userId": 1, "productId": "PROD001", "quantity": 1}'
+```
+
+#### 5. Port Conflicts
 If ports are already in use:
 ```bash
 # Stop existing services
@@ -351,6 +434,9 @@ Qurilo Assessment/
 │       ├── repository/
 │       ├── service/
 │       └── utils/
+│   └── src/main/resources/
+│       └── templates/         # Email templates
+│           └── order-confirmation-email.html
 └── logs/                       # Application logs
 ```
 

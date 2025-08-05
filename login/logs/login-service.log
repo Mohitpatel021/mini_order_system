@@ -2042,3 +2042,9 @@
 2025-08-05T09:59:54.387+05:30  INFO 20172 --- [login-service] [restartedMain] com.qurilo.login.LoginApplication        : Started LoginApplication in 1.11 seconds (process running for 21305.831)
 2025-08-05T09:59:54.388+05:30  INFO 20172 --- [login-service] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
 2025-08-05T09:59:54.409+05:30  INFO 20172 --- [login-service] [restartedMain] c.q.login.config.RedisConnectionChecker  :  Redis connected successfully!
+2025-08-05T10:34:17.557+05:30  WARN 20172 --- [login-service] [HikariPool-46:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-46 - Thread starvation or clock leap detected (housekeeper delta=7m44s15ms302µs900ns).
+2025-08-05T11:36:49.430+05:30  WARN 20172 --- [login-service] [HikariPool-46:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-46 - Thread starvation or clock leap detected (housekeeper delta=57m38s838ms630µs900ns).
+2025-08-05T11:41:02.411+05:30  INFO 20172 --- [login-service] [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-05T11:41:02.414+05:30  INFO 20172 --- [login-service] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-08-05T11:41:02.523+05:30  INFO 20172 --- [login-service] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 105 ms
+2025-08-05T11:41:02.913+05:30  WARN 20172 --- [login-service] [http-nio-8082-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.qurilo.login.exception.UserNotFoundException: User not found with ID: 2]

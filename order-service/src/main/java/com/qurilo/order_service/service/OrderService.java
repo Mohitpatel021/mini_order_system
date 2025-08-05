@@ -34,6 +34,9 @@ public class OrderService {
 	@Autowired
 	private UserServiceClient userServiceClient;
 
+	@Autowired
+	private EmailService emailService;
+
 	@Transactional
 	public CustomApiResponse<OrderResponse> processOrder(OrderRequest request) {
 		try {
@@ -82,6 +85,8 @@ public class OrderService {
 			}
 			clearProductCache(request.getProductId());
 			OrderResponse orderResponse = OrderResponse.fromOrder(savedOrder);
+			UserResponse user = userVerificationResponse.getData();
+			emailService.sendOrderConfirmationEmail(user, orderResponse);
 			return new CustomApiResponse<>(true, "Order processed successfully", orderResponse, HttpStatus.CREATED);
 
 		} catch (Exception e) {

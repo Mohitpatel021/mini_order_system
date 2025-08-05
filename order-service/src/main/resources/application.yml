@@ -40,11 +40,26 @@ spring:
     type: redis
     redis:
       cache-null-values: false
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: mohitpa021@gmail.com
+    password: qtjxobdfwfwntfrs
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+          timeout: 10000
+          connectiontimeout: 10000
+          writetimeout: 10000
+        transport:
+          protocol: smtp
 
 logging:
   file:
     name: logs/order-service.log
-
 
 springdoc:
   api-docs:

@@ -10620,3 +10620,6 @@ Caused by: java.lang.Error: Unresolved compilation problem:
 2025-08-05T09:54:31.157+05:30  INFO 12300 --- [product-service] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat-21].[localhost].[/]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2025-08-05T09:54:31.157+05:30  INFO 12300 --- [product-service] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2025-08-05T09:54:31.158+05:30  INFO 12300 --- [product-service] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-08-05T10:26:39.550+05:30  WARN 12300 --- [product-service] [HikariPool-207:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-207 - Thread starvation or clock leap detected (housekeeper delta=50s598ms799µs200ns).
+2025-08-05T10:34:28.871+05:30  WARN 12300 --- [product-service] [HikariPool-207:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-207 - Thread starvation or clock leap detected (housekeeper delta=7m49s320ms880µs600ns).
+2025-08-05T11:36:49.730+05:30  WARN 12300 --- [product-service] [HikariPool-207:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-207 - Thread starvation or clock leap detected (housekeeper delta=57m27s921ms128µs300ns).
