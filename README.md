@@ -130,7 +130,7 @@ cd order-service
 mvn clean install
 mvn spring-boot:run
 ```
-
+## Don't forget to add your email smtp credentials
 ## 📧 Email Notification System
 
 ### Features
