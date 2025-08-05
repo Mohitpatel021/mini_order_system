@@ -9,7 +9,7 @@ spring:
     time-zone: UTC
     default-property-inclusion: NON_NULL
   datasource:
-    url: jdbc:postgresql://localhost:5432/orders
+    url: jdbc:postgresql://postgres:5432/orders
     username: ${DB_USERNAME:postgres}
     password: ${DB_PASSWORD:root}
     driver-class-name: org.postgresql.Driver
@@ -22,11 +22,10 @@ spring:
         dialect: org.hibernate.dialect.PostgreSQLDialect
   sql:
     init:
-      mode: always
-      continue-on-error: true
+      mode: never
   data:
     redis:
-      host: ${REDIS_HOST:localhost}
+      host: ${REDIS_HOST:mini_order_redis}
       port: ${REDIS_PORT:6379}
       timeout: 2000ms
       database: 0

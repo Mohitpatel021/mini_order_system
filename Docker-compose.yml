@@ -9,10 +9,8 @@ services:
     networks:
       - mini_order_system
     depends_on:
-      postgres:
-        condition: service_healthy
-      mini_order_redis:
-        condition: service_healthy
+      - postgres
+      - mini_order_redis
     environment:
       - REDIS_HOST=mini_order_redis
       - REDIS_PORT=6379
@@ -30,10 +28,8 @@ services:
     networks:
       - mini_order_system
     depends_on:
-      postgres:
-        condition: service_healthy
-      mini_order_redis:
-        condition: service_healthy
+      - postgres
+      - mini_order_redis
     environment:
       - REDIS_HOST=mini_order_redis
       - REDIS_PORT=6379
@@ -51,10 +47,8 @@ services:
     networks:
       - mini_order_system
     depends_on:
-      postgres:
-        condition: service_healthy
-      mini_order_redis:
-        condition: service_healthy
+      - postgres
+      - mini_order_redis
     environment:
       - REDIS_HOST=mini_order_redis
       - REDIS_PORT=6379

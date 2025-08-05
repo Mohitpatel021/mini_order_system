@@ -40,24 +40,66 @@ git clone <repository-url>
 cd "Qurilo Assessment"
 ```
 
-### 2. Start All Services
+### 2. Configure Database Credentials (Optional)
+
+**Default Credentials:**
+- **PostgreSQL User**: `postgres`
+- **PostgreSQL Password**: `root`
+
+**To Change Credentials:**
+
+#### Option A: Update Docker Compose File
+Edit `Docker-compose.yml`:
+```yaml
+postgres:
+  environment:
+    POSTGRES_USER: your_custom_user
+    POSTGRES_PASSWORD: your_custom_password
+```
+
+And update all services:
+```yaml
+order-service:
+  environment:
+    - DB_USERNAME=your_custom_user
+    - DB_PASSWORD=your_custom_password
+
+product-service:
+  environment:
+    - DB_USERNAME=your_custom_user
+    - DB_PASSWORD=your_custom_password
+
+login-service:
+  environment:
+    - DB_USERNAME=your_custom_user
+    - DB_PASSWORD=your_custom_password
+```
+
+
+
+### 3. Build and Start All Services
 ```bash
+# Build images with new configuration
+docker-compose build
+
+# Start all services
 docker-compose up -d
 ```
 
 This command will:
+- Build all service images with updated configuration
 - Start PostgreSQL database on port 5432
 - Start Redis on port 6379
 - Build and start all three microservices
 - Set up the database schema automatically
 
-### 3. Verify Services
+### 4. Verify Services
 Check if all services are running:
 ```bash
 docker-compose ps
 ```
 
-### 4. Access Services
+### 5. Access Services
 - **Login Service**: http://localhost:8082
 - **Product Service**: http://localhost:8080  
 - **Order Service**: http://localhost:8081
@@ -95,7 +137,7 @@ redis-server
 Create `.env` files or set environment variables:
 
 ```bash
-# Database Configuration
+# Database Configuration (Default Values)
 DB_USERNAME=postgres
 DB_PASSWORD=root
 
@@ -106,6 +148,10 @@ REDIS_PORT=6379
 # Email Configuration (for Order Service)
 MAIL_USERNAME=your-email@gmail.com
 MAIL_PASSWORD=your-app-password
+
+# PostgreSQL Configuration (for Docker Compose)
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=root
 ```
 
 ### 3. Build and Run Services
@@ -130,6 +176,57 @@ cd order-service
 mvn clean install
 mvn spring-boot:run
 ```
+
+## 🔧 Custom Database Configuration
+
+### Changing Database Credentials
+
+If you want to use custom database credentials, follow these steps:
+
+#### Step 1: Update Docker Compose Configuration
+Edit `Docker-compose.yml` and change:
+```yaml
+postgres:
+  environment:
+    POSTGRES_USER: your_new_username
+    POSTGRES_PASSWORD: your_new_password
+```
+
+#### Step 2: Update Service Environment Variables
+In the same file, update all services:
+```yaml
+order-service:
+  environment:
+    - DB_USERNAME=your_new_username
+    - DB_PASSWORD=your_new_password
+
+product-service:
+  environment:
+    - DB_USERNAME=your_new_username
+    - DB_PASSWORD=your_new_password
+
+login-service:
+  environment:
+    - DB_USERNAME=your_new_username
+    - DB_PASSWORD=your_new_password
+```
+
+#### Step 3: Rebuild and Start
+```bash
+# Stop existing containers
+docker-compose down
+
+# Remove old volumes (important for new credentials)
+docker-compose down -v
+
+# Build with new configuration
+docker-compose build
+
+# Start services
+docker-compose up -d
+```
+
+
 
 ## 📧 Email Notification System
 
@@ -176,12 +273,7 @@ spring:
   - `{{orderDate}}` - Order creation date
   - `{{totalAmount}}` - Total amount in ₹
 
-#### Email Features
-- **Professional Design**: Gradient header, clean layout, mobile-responsive
-- **Status Badges**: Visual status indicators with color coding
-- **Currency Formatting**: Proper ₹ symbol for all monetary values
-- **Async Processing**: Email sending doesn't block order processing
-- **Error Handling**: Comprehensive error logging and fallback options
+
 
 ### Setting Up Email (Gmail)
 1. **Enable 2-Step Verification** on your Gmail account
@@ -450,36 +542,8 @@ Qurilo Assessment/
 ## 📈 Monitoring & Logging
 
 - **Application Logs**: Stored in `logs/` directory
-- **Health Checks**: Built-in Spring Boot Actuator
 - **Redis Monitoring**: Connection status logging
 - **Database Monitoring**: Connection pool metrics
-
-## 🚀 Deployment
-
-### Production Considerations
-1. **Environment Variables**: Use proper environment variables for sensitive data
-2. **Database Security**: Implement proper database security
-3. **Network Security**: Configure firewalls and network policies
-4. **Monitoring**: Set up proper monitoring and alerting
-5. **Backup Strategy**: Implement database backup procedures
-
-### Scaling
-- **Horizontal Scaling**: Deploy multiple instances of each service
-- **Load Balancing**: Use load balancers for service distribution
-- **Database Scaling**: Consider read replicas for database scaling
-- **Cache Scaling**: Implement Redis clustering for high availability
-
-## 📞 Support
-
-For issues and questions:
-1. Check the troubleshooting section
-2. Review service logs
-3. Verify configuration settings
-4. Test individual service endpoints
-
-## 📄 License
-
-This project is part of the Qurilo Assessment and is for demonstration purposes.
 
 ---
 

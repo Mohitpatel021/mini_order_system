@@ -5,7 +5,7 @@ spring:
   application:
     name: login-service
   datasource:
-    url: jdbc:postgresql://localhost:5432/users
+    url: jdbc:postgresql://postgres:5432/users
     username: ${DB_USERNAME:postgres}
     password: ${DB_PASSWORD:root}
     driver-class-name: org.postgresql.Driver
@@ -18,11 +18,10 @@ spring:
         dialect: org.hibernate.dialect.PostgreSQLDialect
   sql:
     init:
-      mode: always
-      continue-on-error: true
+      mode: never
   data:
     redis:
-      host: ${REDIS_HOST:localhost}
+      host: ${REDIS_HOST:mini_order_redis}
       port: ${REDIS_PORT:6379}
       database: 0
       timeout: 2000ms
