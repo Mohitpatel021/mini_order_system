@@ -1,0 +1,111 @@
+# version: '3'
+name: mini_order_system
+
+services:
+  order-service:
+    container_name: "order-service"
+    image: "order-service:latest"
+    restart: always
+    networks:
+      - mini_order_system
+    depends_on:
+      postgres:
+        condition: service_healthy
+      mini_order_redis:
+        condition: service_healthy
+    environment:
+      - REDIS_HOST=mini_order_redis
+      - REDIS_PORT=6379
+      - DB_USERNAME=postgres
+      - DB_PASSWORD=root
+    ports:
+      - "8081:8081"
+    build:
+      context: ./order-service
+
+  product-service:
+    container_name: "product-service"
+    image: "product-service:latest"
+    restart: always
+    networks:
+      - mini_order_system
+    depends_on:
+      postgres:
+        condition: service_healthy
+      mini_order_redis:
+        condition: service_healthy
+    environment:
+      - REDIS_HOST=mini_order_redis
+      - REDIS_PORT=6379
+      - DB_USERNAME=postgres
+      - DB_PASSWORD=root
+    ports:
+      - "8080:8080"
+    build:
+      context: ./product-service
+
+  login-service:
+    container_name: "login-service"
+    image: "login-service:latest"
+    restart: always
+    networks:
+      - mini_order_system
+    depends_on:
+      postgres:
+        condition: service_healthy
+      mini_order_redis:
+        condition: service_healthy
+    environment:
+      - REDIS_HOST=mini_order_redis
+      - REDIS_PORT=6379
+      - DB_USERNAME=postgres
+      - DB_PASSWORD=root
+    ports:
+      - "8082:8082"
+    build:
+      context: ./login
+
+  postgres:
+    image: postgres:15
+    container_name: postgres_db
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: root
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./init-databases.sql:/docker-entrypoint-initdb.d/init-databases.sql
+    networks:
+      - mini_order_system
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U root"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  mini_order_redis:
+    image: redis:latest
+    container_name: mini_order_redis
+    restart: always
+    networks:
+      - mini_order_system
+    ports:
+      - "6379:6379"
+    volumes:
+      - /var/redis_data:/var/lib/redis
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 1s
+      timeout: 3s
+      retries: 5
+      start_period: 5s
+
+volumes:
+  postgres_data:
+  redis_data:
+
+networks:
+  mini_order_system:
+    driver: bridge

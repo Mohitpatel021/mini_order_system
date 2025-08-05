@@ -1,0 +1,362 @@
+2025-08-05T03:42:09.053+05:30  INFO 20372 --- [product-service] [restartedMain] c.q.p.ProductServiceApplication          : Starting ProductServiceApplication using Java 22.0.1 with PID 20372 (D:\Qurilo Assessment\product-service\target\classes started by DELL in D:\Qurilo Assessment)
+2025-08-05T03:42:09.057+05:30  INFO 20372 --- [product-service] [restartedMain] c.q.p.ProductServiceApplication          : No active profile set, falling back to 1 default profile: "default"
+2025-08-05T03:42:09.367+05:30  INFO 20372 --- [product-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-08-05T03:42:09.367+05:30  INFO 20372 --- [product-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-08-05T03:42:11.289+05:30  INFO 20372 --- [product-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-08-05T03:42:11.291+05:30  INFO 20372 --- [product-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-05T03:42:11.480+05:30  INFO 20372 --- [product-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 173 ms. Found 1 JPA repository interface.
+2025-08-05T03:42:11.596+05:30  INFO 20372 --- [product-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-08-05T03:42:11.598+05:30  INFO 20372 --- [product-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-08-05T03:42:11.627+05:30  INFO 20372 --- [product-service] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.qurilo.product_service.repository.ProductRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-08-05T03:42:11.627+05:30  INFO 20372 --- [product-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+2025-08-05T03:42:12.911+05:30  INFO 20372 --- [product-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-08-05T03:42:12.939+05:30  INFO 20372 --- [product-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-05T03:42:12.940+05:30  INFO 20372 --- [product-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-05T03:42:13.040+05:30  INFO 20372 --- [product-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-05T03:42:13.041+05:30  INFO 20372 --- [product-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3672 ms
+2025-08-05T03:42:13.250+05:30  INFO 20372 --- [product-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-05T03:42:13.642+05:30  INFO 20372 --- [product-service] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2ba6f70
+2025-08-05T03:42:13.645+05:30  INFO 20372 --- [product-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-05T03:42:13.889+05:30  INFO 20372 --- [product-service] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-05T03:42:13.986+05:30  INFO 20372 --- [product-service] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-08-05T03:42:14.071+05:30  INFO 20372 --- [product-service] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-05T03:42:14.704+05:30  INFO 20372 --- [product-service] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-05T03:42:14.807+05:30  WARN 20372 --- [product-service] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-05T03:42:14.827+05:30  INFO 20372 --- [product-service] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-08-05T03:42:16.136+05:30  INFO 20372 --- [product-service] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-05T03:42:16.230+05:30  INFO 20372 --- [product-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-05T03:42:17.088+05:30  INFO 20372 --- [product-service] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-08-05T03:42:18.653+05:30  WARN 20372 --- [product-service] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-05T03:42:19.670+05:30  WARN 20372 --- [product-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2025-08-05T03:42:19.756+05:30  INFO 20372 --- [product-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-08-05T03:42:19.775+05:30  INFO 20372 --- [product-service] [restartedMain] c.q.p.ProductServiceApplication          : Started ProductServiceApplication in 12.628 seconds (process running for 14.264)
+2025-08-05T03:42:20.471+05:30 ERROR 20372 --- [product-service] [restartedMain] c.q.p.config.RedisConnectionChecker      : Redis failed! - Error: Unable to connect to Redis
+2025-08-05T03:44:51.213+05:30  INFO 20372 --- [product-service] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-05T03:44:51.222+05:30  INFO 20372 --- [product-service] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-08-05T03:44:51.242+05:30  INFO 20372 --- [product-service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-05T03:44:51.248+05:30  INFO 20372 --- [product-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-08-05T03:44:51.263+05:30  INFO 20372 --- [product-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-08-05T03:45:21.711+05:30  INFO 19520 --- [product-service] [restartedMain] c.q.p.ProductServiceApplication          : Starting ProductServiceApplication using Java 22.0.1 with PID 19520 (D:\Qurilo Assessment\product-service\target\classes started by DELL in D:\Qurilo Assessment)
+2025-08-05T03:45:21.714+05:30  INFO 19520 --- [product-service] [restartedMain] c.q.p.ProductServiceApplication          : No active profile set, falling back to 1 default profile: "default"
+2025-08-05T03:45:21.802+05:30  INFO 19520 --- [product-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-08-05T03:45:21.803+05:30  INFO 19520 --- [product-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-08-05T03:45:23.413+05:30  INFO 19520 --- [product-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-08-05T03:45:23.415+05:30  INFO 19520 --- [product-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-05T03:45:23.593+05:30  INFO 19520 --- [product-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 164 ms. Found 1 JPA repository interface.
+2025-08-05T03:45:23.618+05:30  INFO 19520 --- [product-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-08-05T03:45:23.620+05:30  INFO 19520 --- [product-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-08-05T03:45:23.649+05:30  INFO 19520 --- [product-service] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.qurilo.product_service.repository.ProductRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-08-05T03:45:23.649+05:30  INFO 19520 --- [product-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
+2025-08-05T03:45:24.904+05:30  INFO 19520 --- [product-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-08-05T03:45:24.938+05:30  INFO 19520 --- [product-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-05T03:45:24.940+05:30  INFO 19520 --- [product-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-05T03:45:25.086+05:30  INFO 19520 --- [product-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-05T03:45:25.087+05:30  INFO 19520 --- [product-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3283 ms
+2025-08-05T03:45:25.301+05:30  INFO 19520 --- [product-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-05T03:45:25.608+05:30  INFO 19520 --- [product-service] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@12677d11
+2025-08-05T03:45:25.612+05:30  INFO 19520 --- [product-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-05T03:45:25.728+05:30  INFO 19520 --- [product-service] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-05T03:45:25.800+05:30  INFO 19520 --- [product-service] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-08-05T03:45:25.935+05:30  INFO 19520 --- [product-service] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-05T03:45:26.569+05:30  INFO 19520 --- [product-service] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-05T03:45:26.675+05:30  WARN 19520 --- [product-service] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-05T03:45:26.693+05:30  INFO 19520 --- [product-service] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-08-05T03:45:27.828+05:30  INFO 19520 --- [product-service] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-05T03:45:27.894+05:30  INFO 19520 --- [product-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-05T03:45:28.617+05:30  INFO 19520 --- [product-service] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-08-05T03:45:30.072+05:30  WARN 19520 --- [product-service] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-05T03:45:30.695+05:30  WARN 19520 --- [product-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2025-08-05T03:45:30.741+05:30  INFO 19520 --- [product-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-08-05T03:45:30.754+05:30  INFO 19520 --- [product-service] [restartedMain] c.q.p.ProductServiceApplication          : Started ProductServiceApplication in 9.946 seconds (process running for 11.859)
+2025-08-05T03:45:31.294+05:30  INFO 19520 --- [product-service] [restartedMain] c.q.p.config.RedisConnectionChecker      :  Redis connected!
+2025-08-05T03:45:54.922+05:30  INFO 19520 --- [product-service] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-05T03:45:54.923+05:30  INFO 19520 --- [product-service] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-08-05T03:45:54.932+05:30  INFO 19520 --- [product-service] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2025-08-05T03:45:56.815+05:30  INFO 19520 --- [product-service] [http-nio-8080-exec-10] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 1219 ms
+2025-08-05T03:47:32.238+05:30  INFO 19520 --- [product-service] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (1 addition, 0 deletions, 1 modification)
+2025-08-05T03:47:32.272+05:30  INFO 19520 --- [product-service] [Thread-1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-05T03:47:32.420+05:30  INFO 19520 --- [product-service] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-08-05T03:47:32.481+05:30  INFO 19520 --- [product-service] [Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-05T03:47:32.491+05:30  INFO 19520 --- [product-service] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-08-05T03:47:32.538+05:30  INFO 19520 --- [product-service] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-08-05T03:47:32.729+05:30  INFO 19520 --- [product-service] [restartedMain] c.q.p.ProductServiceApplication          : Starting ProductServiceApplication using Java 22.0.1 with PID 19520 (D:\Qurilo Assessment\product-service\target\classes started by DELL in D:\Qurilo Assessment)
+2025-08-05T03:47:32.733+05:30  INFO 19520 --- [product-service] [restartedMain] c.q.p.ProductServiceApplication          : No active profile set, falling back to 1 default profile: "default"
+2025-08-05T03:47:33.396+05:30  INFO 19520 --- [product-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-08-05T03:47:33.396+05:30  INFO 19520 --- [product-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-05T03:47:33.420+05:30  INFO 19520 --- [product-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 1 JPA repository interface.
+2025-08-05T03:47:33.425+05:30  INFO 19520 --- [product-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-08-05T03:47:33.425+05:30  INFO 19520 --- [product-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-08-05T03:47:33.431+05:30  INFO 19520 --- [product-service] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.qurilo.product_service.repository.ProductRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-08-05T03:47:33.431+05:30  INFO 19520 --- [product-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
+2025-08-05T03:47:33.652+05:30  INFO 19520 --- [product-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-08-05T03:47:33.656+05:30  INFO 19520 --- [product-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-05T03:47:33.659+05:30  INFO 19520 --- [product-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-05T03:47:33.718+05:30  INFO 19520 --- [product-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-05T03:47:33.719+05:30  INFO 19520 --- [product-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 976 ms
+2025-08-05T03:47:33.774+05:30  INFO 19520 --- [product-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2025-08-05T03:47:33.899+05:30  INFO 19520 --- [product-service] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@2af983ce
+2025-08-05T03:47:33.900+05:30  INFO 19520 --- [product-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2025-08-05T03:47:33.940+05:30  INFO 19520 --- [product-service] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-05T03:47:33.955+05:30  INFO 19520 --- [product-service] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-05T03:47:34.174+05:30  INFO 19520 --- [product-service] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-05T03:47:34.187+05:30  WARN 19520 --- [product-service] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-05T03:47:34.190+05:30  INFO 19520 --- [product-service] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 17.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-08-05T03:47:34.513+05:30  INFO 19520 --- [product-service] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-05T03:47:34.540+05:30  INFO 19520 --- [product-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-05T03:47:34.802+05:30  WARN 19520 --- [product-service] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-05T03:47:35.117+05:30  WARN 19520 --- [product-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2025-08-05T03:47:35.131+05:30  INFO 19520 --- [product-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-08-05T03:47:35.140+05:30  INFO 19520 --- [product-service] [restartedMain] c.q.p.ProductServiceApplication          : Started ProductServiceApplication in 2.485 seconds (process running for 136.246)
+2025-08-05T03:47:35.143+05:30  INFO 19520 --- [product-service] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-08-05T03:47:35.229+05:30  INFO 19520 --- [product-service] [restartedMain] c.q.p.config.RedisConnectionChecker      :  Redis connected!
+2025-08-05T03:47:37.468+05:30  INFO 19520 --- [product-service] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-05T03:47:37.477+05:30  INFO 19520 --- [product-service] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-08-05T03:47:37.486+05:30  INFO 19520 --- [product-service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-05T03:47:37.487+05:30  INFO 19520 --- [product-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2025-08-05T03:47:37.501+05:30  INFO 19520 --- [product-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2025-08-05T03:47:52.864+05:30  INFO 15344 --- [product-service] [restartedMain] c.q.p.ProductServiceApplication          : Starting ProductServiceApplication using Java 22.0.1 with PID 15344 (D:\Qurilo Assessment\product-service\target\classes started by DELL in D:\Qurilo Assessment)
+2025-08-05T03:47:53.110+05:30  INFO 15344 --- [product-service] [restartedMain] c.q.p.ProductServiceApplication          : No active profile set, falling back to 1 default profile: "default"
+2025-08-05T03:47:53.272+05:30  INFO 15344 --- [product-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-08-05T03:47:53.272+05:30  INFO 15344 --- [product-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-08-05T03:47:54.805+05:30  INFO 15344 --- [product-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-08-05T03:47:54.807+05:30  INFO 15344 --- [product-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-05T03:47:54.996+05:30  INFO 15344 --- [product-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 175 ms. Found 1 JPA repository interface.
+2025-08-05T03:47:55.032+05:30  INFO 15344 --- [product-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-08-05T03:47:55.034+05:30  INFO 15344 --- [product-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-08-05T03:47:55.065+05:30  INFO 15344 --- [product-service] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.qurilo.product_service.repository.ProductRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-08-05T03:47:55.066+05:30  INFO 15344 --- [product-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+2025-08-05T03:47:56.095+05:30  INFO 15344 --- [product-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-08-05T03:47:56.121+05:30  INFO 15344 --- [product-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-05T03:47:56.122+05:30  INFO 15344 --- [product-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-05T03:47:56.204+05:30  INFO 15344 --- [product-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-05T03:47:56.205+05:30  INFO 15344 --- [product-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2932 ms
+2025-08-05T03:47:56.410+05:30  INFO 15344 --- [product-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-05T03:47:56.700+05:30  INFO 15344 --- [product-service] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@70b6bb9a
+2025-08-05T03:47:56.702+05:30  INFO 15344 --- [product-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-05T03:47:56.814+05:30  INFO 15344 --- [product-service] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-05T03:47:56.881+05:30  INFO 15344 --- [product-service] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-08-05T03:47:56.956+05:30  INFO 15344 --- [product-service] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-05T03:47:57.438+05:30  INFO 15344 --- [product-service] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-05T03:47:57.550+05:30  WARN 15344 --- [product-service] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-05T03:47:57.568+05:30  INFO 15344 --- [product-service] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-08-05T03:47:58.698+05:30  INFO 15344 --- [product-service] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-05T03:47:58.748+05:30  INFO 15344 --- [product-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-05T03:47:59.503+05:30  INFO 15344 --- [product-service] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-08-05T03:48:01.006+05:30  WARN 15344 --- [product-service] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-05T03:48:01.638+05:30  WARN 15344 --- [product-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2025-08-05T03:48:01.683+05:30  INFO 15344 --- [product-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-08-05T03:48:01.701+05:30  INFO 15344 --- [product-service] [restartedMain] c.q.p.ProductServiceApplication          : Started ProductServiceApplication in 9.679 seconds (process running for 10.372)
+2025-08-05T03:48:02.224+05:30  INFO 15344 --- [product-service] [restartedMain] c.q.p.config.RedisConnectionChecker      :  Redis connected!
+2025-08-05T03:48:58.255+05:30  INFO 15344 --- [product-service] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-05T03:48:58.256+05:30  INFO 15344 --- [product-service] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-08-05T03:48:58.259+05:30  INFO 15344 --- [product-service] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-08-05T03:49:00.023+05:30  INFO 15344 --- [product-service] [http-nio-8080-exec-6] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 978 ms
+2025-08-05T03:49:52.095+05:30  INFO 15344 --- [product-service] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-08-05T03:49:52.101+05:30  INFO 15344 --- [product-service] [Thread-1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-05T03:49:52.108+05:30  INFO 15344 --- [product-service] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-08-05T03:49:52.137+05:30  INFO 15344 --- [product-service] [Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-05T03:49:52.145+05:30  INFO 15344 --- [product-service] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-08-05T03:49:52.174+05:30  INFO 15344 --- [product-service] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-08-05T03:49:52.365+05:30  INFO 15344 --- [product-service] [restartedMain] c.q.p.ProductServiceApplication          : Starting ProductServiceApplication using Java 22.0.1 with PID 15344 (D:\Qurilo Assessment\product-service\target\classes started by DELL in D:\Qurilo Assessment)
+2025-08-05T03:49:52.366+05:30  INFO 15344 --- [product-service] [restartedMain] c.q.p.ProductServiceApplication          : No active profile set, falling back to 1 default profile: "default"
+2025-08-05T03:49:53.556+05:30  INFO 15344 --- [product-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-08-05T03:49:53.557+05:30  INFO 15344 --- [product-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-05T03:49:53.696+05:30  INFO 15344 --- [product-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 137 ms. Found 1 JPA repository interface.
+2025-08-05T03:49:53.718+05:30  INFO 15344 --- [product-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-08-05T03:49:53.719+05:30  INFO 15344 --- [product-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-08-05T03:49:53.727+05:30  INFO 15344 --- [product-service] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.qurilo.product_service.repository.ProductRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-08-05T03:49:53.728+05:30  INFO 15344 --- [product-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+2025-08-05T03:49:54.402+05:30  INFO 15344 --- [product-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-08-05T03:49:54.404+05:30  INFO 15344 --- [product-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-05T03:49:54.404+05:30  INFO 15344 --- [product-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-05T03:49:54.502+05:30  INFO 15344 --- [product-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-05T03:49:54.502+05:30  INFO 15344 --- [product-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2131 ms
+2025-08-05T03:49:54.545+05:30  INFO 15344 --- [product-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2025-08-05T03:49:54.722+05:30  INFO 15344 --- [product-service] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@1308b348
+2025-08-05T03:49:54.723+05:30  INFO 15344 --- [product-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2025-08-05T03:49:54.752+05:30  INFO 15344 --- [product-service] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-05T03:49:54.754+05:30  INFO 15344 --- [product-service] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-05T03:49:55.040+05:30  INFO 15344 --- [product-service] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-05T03:49:55.052+05:30  WARN 15344 --- [product-service] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-05T03:49:55.054+05:30  INFO 15344 --- [product-service] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 17.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-08-05T03:49:55.135+05:30  INFO 15344 --- [product-service] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-05T03:49:55.158+05:30  INFO 15344 --- [product-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-05T03:49:55.510+05:30  WARN 15344 --- [product-service] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-05T03:49:56.087+05:30  WARN 15344 --- [product-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2025-08-05T03:49:56.118+05:30  INFO 15344 --- [product-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-08-05T03:49:56.137+05:30  INFO 15344 --- [product-service] [restartedMain] c.q.p.ProductServiceApplication          : Started ProductServiceApplication in 3.861 seconds (process running for 124.808)
+2025-08-05T03:49:56.141+05:30  INFO 15344 --- [product-service] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-08-05T03:49:56.158+05:30  INFO 15344 --- [product-service] [restartedMain] c.q.p.config.RedisConnectionChecker      :  Redis connected!
+2025-08-05T03:50:00.816+05:30  INFO 15344 --- [product-service] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (1 addition, 0 deletions, 1 modification)
+2025-08-05T03:50:00.818+05:30  INFO 15344 --- [product-service] [Thread-5] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-05T03:50:00.850+05:30  INFO 15344 --- [product-service] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-08-05T03:50:00.862+05:30  INFO 15344 --- [product-service] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-05T03:50:00.863+05:30  INFO 15344 --- [product-service] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2025-08-05T03:50:00.881+05:30  INFO 15344 --- [product-service] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2025-08-05T03:50:01.051+05:30  INFO 15344 --- [product-service] [restartedMain] c.q.p.ProductServiceApplication          : Starting ProductServiceApplication using Java 22.0.1 with PID 15344 (D:\Qurilo Assessment\product-service\target\classes started by DELL in D:\Qurilo Assessment)
+2025-08-05T03:50:01.052+05:30  INFO 15344 --- [product-service] [restartedMain] c.q.p.ProductServiceApplication          : No active profile set, falling back to 1 default profile: "default"
+2025-08-05T03:50:01.521+05:30  INFO 15344 --- [product-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-08-05T03:50:01.522+05:30  INFO 15344 --- [product-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-05T03:50:01.538+05:30  INFO 15344 --- [product-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 1 JPA repository interface.
+2025-08-05T03:50:01.542+05:30  INFO 15344 --- [product-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-08-05T03:50:01.542+05:30  INFO 15344 --- [product-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-08-05T03:50:01.549+05:30  INFO 15344 --- [product-service] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.qurilo.product_service.repository.ProductRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-08-05T03:50:01.549+05:30  INFO 15344 --- [product-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
+2025-08-05T03:50:01.758+05:30  INFO 15344 --- [product-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-08-05T03:50:01.759+05:30  INFO 15344 --- [product-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-05T03:50:01.766+05:30  INFO 15344 --- [product-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-05T03:50:01.903+05:30  INFO 15344 --- [product-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-05T03:50:01.903+05:30  INFO 15344 --- [product-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 848 ms
+2025-08-05T03:50:01.936+05:30  INFO 15344 --- [product-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2025-08-05T03:50:02.016+05:30  INFO 15344 --- [product-service] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection org.postgresql.jdbc.PgConnection@6f710a99
+2025-08-05T03:50:02.016+05:30  INFO 15344 --- [product-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2025-08-05T03:50:02.038+05:30  INFO 15344 --- [product-service] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-05T03:50:02.040+05:30  INFO 15344 --- [product-service] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-05T03:50:02.066+05:30  INFO 15344 --- [product-service] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-05T03:50:02.082+05:30  WARN 15344 --- [product-service] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-05T03:50:02.140+05:30  INFO 15344 --- [product-service] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-3)']
+	Database driver: undefined/unknown
+	Database version: 17.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-08-05T03:50:02.224+05:30  INFO 15344 --- [product-service] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-05T03:50:02.267+05:30  INFO 15344 --- [product-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-05T03:50:02.466+05:30  WARN 15344 --- [product-service] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-05T03:50:02.702+05:30  WARN 15344 --- [product-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2025-08-05T03:50:02.754+05:30  INFO 15344 --- [product-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-08-05T03:50:02.780+05:30  INFO 15344 --- [product-service] [restartedMain] c.q.p.ProductServiceApplication          : Started ProductServiceApplication in 1.808 seconds (process running for 131.45)
+2025-08-05T03:50:02.791+05:30  INFO 15344 --- [product-service] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-08-05T03:50:02.828+05:30  INFO 15344 --- [product-service] [restartedMain] c.q.p.config.RedisConnectionChecker      :  Redis connected!
+2025-08-05T03:50:41.543+05:30  INFO 15344 --- [product-service] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-05T03:50:41.544+05:30  INFO 15344 --- [product-service] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-08-05T03:50:41.547+05:30  INFO 15344 --- [product-service] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-08-05T03:50:42.254+05:30  INFO 15344 --- [product-service] [http-nio-8080-exec-6] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 300 ms
+2025-08-05T03:51:43.481+05:30  INFO 15344 --- [product-service] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2025-08-05T03:51:43.483+05:30  INFO 15344 --- [product-service] [Thread-9] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-05T03:51:43.488+05:30  INFO 15344 --- [product-service] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-08-05T03:51:43.494+05:30  INFO 15344 --- [product-service] [Thread-9] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-05T03:51:43.495+05:30  INFO 15344 --- [product-service] [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2025-08-05T03:51:43.504+05:30  INFO 15344 --- [product-service] [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2025-08-05T03:51:43.606+05:30  INFO 15344 --- [product-service] [restartedMain] c.q.p.ProductServiceApplication          : Starting ProductServiceApplication using Java 22.0.1 with PID 15344 (D:\Qurilo Assessment\product-service\target\classes started by DELL in D:\Qurilo Assessment)
+2025-08-05T03:51:43.606+05:30  INFO 15344 --- [product-service] [restartedMain] c.q.p.ProductServiceApplication          : No active profile set, falling back to 1 default profile: "default"
+2025-08-05T03:51:43.913+05:30  INFO 15344 --- [product-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-08-05T03:51:43.914+05:30  INFO 15344 --- [product-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-05T03:51:43.942+05:30  INFO 15344 --- [product-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24 ms. Found 1 JPA repository interface.
+2025-08-05T03:51:43.948+05:30  INFO 15344 --- [product-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-08-05T03:51:44.365+05:30  INFO 15344 --- [product-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-08-05T03:51:44.370+05:30  INFO 15344 --- [product-service] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.qurilo.product_service.repository.ProductRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-08-05T03:51:44.370+05:30  INFO 15344 --- [product-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2025-08-05T03:51:44.483+05:30  INFO 15344 --- [product-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-08-05T03:51:44.484+05:30  INFO 15344 --- [product-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-05T03:51:44.484+05:30  INFO 15344 --- [product-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-05T03:51:44.515+05:30  INFO 15344 --- [product-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-05T03:51:44.515+05:30  INFO 15344 --- [product-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 906 ms
+2025-08-05T03:51:44.565+05:30  INFO 15344 --- [product-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2025-08-05T03:51:44.631+05:30  INFO 15344 --- [product-service] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection org.postgresql.jdbc.PgConnection@a2ccecc
+2025-08-05T03:51:44.631+05:30  INFO 15344 --- [product-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2025-08-05T03:51:44.650+05:30  INFO 15344 --- [product-service] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-05T03:51:44.651+05:30  INFO 15344 --- [product-service] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-05T03:51:44.660+05:30  INFO 15344 --- [product-service] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-05T03:51:44.671+05:30  WARN 15344 --- [product-service] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-05T03:51:44.674+05:30  INFO 15344 --- [product-service] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-4)']
+	Database driver: undefined/unknown
+	Database version: 17.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-08-05T03:51:44.724+05:30  INFO 15344 --- [product-service] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-05T03:51:44.753+05:30  INFO 15344 --- [product-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-05T03:51:44.987+05:30  WARN 15344 --- [product-service] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-05T03:51:45.209+05:30  WARN 15344 --- [product-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2025-08-05T03:51:45.219+05:30  INFO 15344 --- [product-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-08-05T03:51:45.224+05:30  INFO 15344 --- [product-service] [restartedMain] c.q.p.ProductServiceApplication          : Started ProductServiceApplication in 1.649 seconds (process running for 233.895)
+2025-08-05T03:51:45.226+05:30  INFO 15344 --- [product-service] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-08-05T03:51:45.250+05:30  INFO 15344 --- [product-service] [restartedMain] c.q.p.config.RedisConnectionChecker      :  Redis connected!
+2025-08-05T03:52:03.330+05:30  INFO 15344 --- [product-service] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (1 addition, 0 deletions, 1 modification)
+2025-08-05T03:52:03.332+05:30  INFO 15344 --- [product-service] [Thread-13] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-05T03:52:03.337+05:30  INFO 15344 --- [product-service] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-08-05T03:52:03.344+05:30  INFO 15344 --- [product-service] [Thread-13] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-05T03:52:03.346+05:30  INFO 15344 --- [product-service] [Thread-13] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2025-08-05T03:52:03.360+05:30  INFO 15344 --- [product-service] [Thread-13] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2025-08-05T03:52:03.474+05:30  INFO 15344 --- [product-service] [restartedMain] c.q.p.ProductServiceApplication          : Starting ProductServiceApplication using Java 22.0.1 with PID 15344 (D:\Qurilo Assessment\product-service\target\classes started by DELL in D:\Qurilo Assessment)
+2025-08-05T03:52:03.475+05:30  INFO 15344 --- [product-service] [restartedMain] c.q.p.ProductServiceApplication          : No active profile set, falling back to 1 default profile: "default"
+2025-08-05T03:52:03.854+05:30  INFO 15344 --- [product-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-08-05T03:52:03.855+05:30  INFO 15344 --- [product-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-05T03:52:03.867+05:30  INFO 15344 --- [product-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 1 JPA repository interface.
+2025-08-05T03:52:03.871+05:30  INFO 15344 --- [product-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-08-05T03:52:03.871+05:30  INFO 15344 --- [product-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-08-05T03:52:03.885+05:30  INFO 15344 --- [product-service] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.qurilo.product_service.repository.ProductRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-08-05T03:52:03.886+05:30  INFO 15344 --- [product-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+2025-08-05T03:52:04.038+05:30  INFO 15344 --- [product-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-08-05T03:52:04.040+05:30  INFO 15344 --- [product-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-05T03:52:04.040+05:30  INFO 15344 --- [product-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-05T03:52:04.167+05:30  INFO 15344 --- [product-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-05T03:52:04.167+05:30  INFO 15344 --- [product-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 689 ms
+2025-08-05T03:52:04.212+05:30  INFO 15344 --- [product-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2025-08-05T03:52:04.290+05:30  INFO 15344 --- [product-service] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection org.postgresql.jdbc.PgConnection@37f73c35
+2025-08-05T03:52:04.290+05:30  INFO 15344 --- [product-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2025-08-05T03:52:04.314+05:30  INFO 15344 --- [product-service] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-05T03:52:04.316+05:30  INFO 15344 --- [product-service] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-05T03:52:04.325+05:30  INFO 15344 --- [product-service] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-05T03:52:04.337+05:30  WARN 15344 --- [product-service] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-05T03:52:04.340+05:30  INFO 15344 --- [product-service] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-5)']
+	Database driver: undefined/unknown
+	Database version: 17.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-08-05T03:52:04.396+05:30  INFO 15344 --- [product-service] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-05T03:52:04.419+05:30  INFO 15344 --- [product-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-05T03:52:04.557+05:30  WARN 15344 --- [product-service] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-05T03:52:04.790+05:30  WARN 15344 --- [product-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2025-08-05T03:52:04.809+05:30  INFO 15344 --- [product-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-08-05T03:52:04.820+05:30  INFO 15344 --- [product-service] [restartedMain] c.q.p.ProductServiceApplication          : Started ProductServiceApplication in 1.386 seconds (process running for 253.491)
+2025-08-05T03:52:04.824+05:30  INFO 15344 --- [product-service] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-08-05T03:52:04.883+05:30  INFO 15344 --- [product-service] [restartedMain] c.q.p.config.RedisConnectionChecker      :  Redis connected!
+2025-08-05T03:52:39.754+05:30  INFO 15344 --- [product-service] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-05T03:52:44.493+05:30  INFO 15344 --- [product-service] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-08-05T03:52:45.616+05:30  INFO 15344 --- [product-service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-05T03:52:45.619+05:30  INFO 15344 --- [product-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2025-08-05T03:52:45.744+05:30  INFO 15344 --- [product-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
